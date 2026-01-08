@@ -23,14 +23,14 @@
   i18n.defaultLocale = "en_US.UTF-8";
   console.keyMap = "de";
 
- # services.xserver = {
- #   enable = true;
- #   autoRepeatDelay = 200;
- #   autoRepeatInterval = 35;
- #   xkb.layout = "de";
- #   windowManager.qtile.enable = true;
- # };
- # services.displayManager.ly.enable = true;
+ services.xserver = {
+   enable = true;
+   autoRepeatDelay = 200;
+   autoRepeatInterval = 35;
+   xkb.layout = "de";
+   windowManager.qtile.enable = true;
+ };
+ services.displayManager.ly.enable = true;
   
 
   users.users.kevin = {
@@ -52,8 +52,8 @@
     nemo
   ];
 
-  services.greetd.enable = true;
-  services.greetd.settings.default_session.command = "${pkgs.niri}/bin/niri-session"; 
+  #services.greetd.enable = true;
+  #services.greetd.settings.default_session.command = "${pkgs.niri}/bin/niri-session"; 
   programs.firefox.enable = true;
   programs.niri.enable = true;
 
