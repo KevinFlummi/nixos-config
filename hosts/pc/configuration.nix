@@ -42,21 +42,16 @@
   };
 
 
-  programs.firefox.enable = true;
-  programs.niri.enable = true;
-  
-
   environment.systemPackages = with pkgs; [
     vim
     git
     wget
     kitty
-    waybar
-    gvfs
-    tumbler
-    thunar
+    nemo
   ];
 
+  programs.firefox.enable = true;
+  programs.niri.enable = true;
   programs.waybar.enable = true;
 
   services.gvfs.enable = true;
