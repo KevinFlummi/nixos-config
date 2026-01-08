@@ -20,35 +20,35 @@
   - flake.nix   % high-level wiring and control point
   - flake.lock
   - hosts/ % one folder for each machine, load modules depending on needs & purpose
-    ─ my-machine1/
+    - my-machine1/
         - hardware-configuration.nix
-        ─ configuration.nix
+        - configuration.nix
   - modules/
-    ─ nixos/   % core OS programs and utils (shell env, tools, basic wm, ...)
-        ─ common.nix
-        ─ users.nix
-        ─ wayland.nix
-        ─ networking.nix
-    ─ home/   % specific apps for certain task groups (f.ex. 'gaming', 'devkit')
-        ─ common.nix
-        ─ devkit.nix
-        ─ fun.nix
-        ─ multimedia.nix
-    ─ <submodule: dotfiles as config>
+    - nixos/   % core OS programs and utils (shell env, tools, basic wm, ...)
+        - common.nix
+        - users.nix
+        - wayland.nix
+        - networking.nix
+    - home/   % specific apps for certain task groups (f.ex. 'gaming', 'devkit')
+        - common.nix
+        - devkit.nix
+        - fun.nix
+        - multimedia.nix
+    - <submodule: dotfiles as config>
   - home/
-    ─ myuser/ % one folder for each user instance, in here we import modules based on user prefs
-        ─ home.nix
+    - myuser/ % one folder for each user instance, in here we import modules based on user prefs
+        - home.nix
   - secrets/
-    ─ (if any)
+    - (if any)
   - README.md
 
 ## Repo for linux dotfile configuration
 
 - dotfiles/
-  ─ nvim/
-  ─ kitty/
-  ─ niri/
-  ─ ...
+  - nvim/
+  - kitty/
+  - niri/
+  - ...
 
 ## Usage
 
