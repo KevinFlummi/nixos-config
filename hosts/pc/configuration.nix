@@ -47,6 +47,8 @@
     git
     wget
     kitty
+    waybar
+    xwayland-satellite
     nemo
   ];
 
