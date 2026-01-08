@@ -1,6 +1,7 @@
 {
   description = "NixOS Base Setup";
   inputs = {
+    self.submodules = true;
     nixpkgs.url = "nixpkgs/nixos-25.11";
       home-manager = {
         url = "github:nix-community/home-manager/release-25.11";
@@ -9,7 +10,7 @@
   };
 
   outputs = { self, nixpkgs, home-manager, ... }: {
-    nixosConfigurations.base = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.pc = nixpkgs.lib.nixosSystem {
       system  = "x86_64-linux";
       modules = [
         ./hosts/pc/configuration.nix
