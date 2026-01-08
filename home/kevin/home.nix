@@ -15,6 +15,8 @@
     fastfetch
   ];
 
+  services.walker.enable = true;
+
   services.dunst.enable = true;
 
   programs.git = {
