@@ -51,9 +51,16 @@
     git
     wget
     kitty
-    fastfetch
     waybar
+    gvfs
+    tumbler
+    thunar
   ];
+
+  programs.waybar.enable = true;
+
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
   ];
