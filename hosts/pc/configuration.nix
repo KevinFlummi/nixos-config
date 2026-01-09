@@ -45,9 +45,11 @@
 
   services.greetd.enable = true;
   services.greetd.settings.default_session = {
-    command = "${pkgs.niri}/bin/niri-session";
+    command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd ${pkgs.niri}/bin/niri-session";
     user = "kevin";
   };
+  programs.xwayland.enable = true;
+
   fonts.packages = with pkgs; [
     inter
     nerd-fonts.jetbrains-mono
