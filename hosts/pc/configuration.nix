@@ -54,6 +54,14 @@
     inter
     nerd-fonts.jetbrains-mono
   ];
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts = {
+      serif = [ "Inter" ];
+      sansSerif = [ "Inter" ];
+      monospace = [ "JetBrainsMono Nerd Font" ];
+    };
+  };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

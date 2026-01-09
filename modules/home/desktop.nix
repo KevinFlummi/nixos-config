@@ -9,10 +9,8 @@
 
   programs.noctalia-shell = {
     enable = true;
-    settings = {
-      colorSchemes.predefinedScheme = "Catppuccin Lavender";
-    };
   };
 
   xdg.configFile."niri".source = "${dotfiles}/niri";
+  xdg.configFile."noctalia-shell".source = "${dotfiles}/noctalia";
 }

@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkg; [
+  home.packages = with pkgs; [
     age
     sops
   ];
