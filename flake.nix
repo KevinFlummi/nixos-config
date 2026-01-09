@@ -1,8 +1,8 @@
 {
   description = "NixOS Base Setup";
   inputs = {
-    self.submodules = true;
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    catppuccin.url = "github:catppuccin/nix";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -18,7 +18,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }: {
+  outputs = { self, nixpkgs, home-manager, catppuccin, noctalia, ... }: {
     nixosConfigurations.pc = nixpkgs.lib.nixosSystem {
       system  = "x86_64-linux";
       modules = [
@@ -28,7 +28,11 @@
 	         home-manager = {
              useGlobalPkgs = true;
              useUserPackages = true;
-             users.kevin = import ./home/kevin/home.nix;
+             users.kevin.imports = [
+               ./home/kevin/home.nix
+               catppuccin.homeModules.catppuccin
+               noctalia.homeManagerModules.default
+             ];
              backupFileExtension = "backup";
            };
         }

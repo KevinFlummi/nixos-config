@@ -10,12 +10,18 @@
     htop
     age
     sops
+    nemo
     fastfetch
   ];
 
-  services.walker.enable = true;
-
-  services.dunst.enable = true;
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+    firefox.enable = true;
+    gtk.enable = true;
+    kitty.enable = true;
+    nvim.enable = true;
+  }
 
   programs.git = {
     enable = true;
@@ -32,8 +38,9 @@
       btw = "echo sanitycheck";
     };
   };
+  programs.noctalia.enable = true;
+
   xdg.configFile."niri".source = ../../modules/config/niri;
-  xdg.configFile."walker".source = ../../modules/config/walker;
 
   home.stateVersion = "25.11";
 }
