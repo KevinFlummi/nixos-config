@@ -3,7 +3,6 @@
 {
   home.username = "kevin";
   home.homeDirectory = "/home/kevin";
-  #programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
     neovim
@@ -12,6 +11,7 @@
     sops
     nemo
     fastfetch
+    xwayland-satellite
   ];
 
   catppuccin = {
@@ -32,12 +32,29 @@
       pull.rebase = true;
     };
   };
-  programs.bash = {
+  programs.zsh = {
     enable = true;
+    ohMyZsh.enable = false;
+    interactiveShellInit = ''
+      export EDITOR=nvim
+    '';
     shellAliases = {
-      btw = "echo sanitycheck";
+      btw = "echo i use NixOS with zsh btw";
     };
   };
+  programs.starship = {
+    enable = true;
+    promptInit = true;
+  };
+  programs.kitty = {
+    enable = true;
+    extraConfig = ''
+      shell zsh
+    '';
+  };
+  programs.xwayland.enable = true;
+  programs.firefox.enable = true;
+  programs.niri.enable = true;
   programs.noctalia.enable = true;
 
   xdg.configFile."niri".source = ../../modules/config/niri;

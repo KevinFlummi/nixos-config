@@ -17,6 +17,8 @@
   services.tuned.enable = true;
   services.upower.enable = true;
   services.openssh.enable = true;
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
 
   services.pipewire = {
     enable = true;
@@ -39,10 +41,6 @@
     vim
     git
     wget
-    kitty
-    xwayland-satellite
-    niri
-    inputs.noctalia.packages.${system}.default
   ];
 
   services.greetd.enable = true;
@@ -50,12 +48,6 @@
     command = "${pkgs.niri}/bin/niri-session";
     user = "kevin";
   };
-  programs.xwayland.enable = true;
-  programs.firefox.enable = true;
-  programs.niri.enable = true;
-
-  services.gvfs.enable = true;
-  services.tumbler.enable = true;
   fonts.packages = with pkgs; [
     inter
     nerd-fonts.jetbrains-mono
