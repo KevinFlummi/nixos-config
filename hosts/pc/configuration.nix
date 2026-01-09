@@ -1,10 +1,12 @@
-{ config, lib, pkgs, ... }:
-
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -33,7 +35,7 @@
   users.users.kevin = {
     shell = pkgs.zsh;
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = ["wheel"];
   };
 
   environment.systemPackages = with pkgs; [
@@ -57,14 +59,13 @@
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {
-      serif = [ "Inter" ];
-      sansSerif = [ "Inter" ];
-      monospace = [ "JetBrainsMono Nerd Font" ];
+      serif = ["Inter"];
+      sansSerif = ["Inter"];
+      monospace = ["JetBrainsMono Nerd Font"];
     };
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   system.stateVersion = "25.11"; # Did you read the comment? (yes (=don't delete this line))
-
 }

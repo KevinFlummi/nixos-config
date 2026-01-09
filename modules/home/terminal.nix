@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     htop
     fastfetch
@@ -26,5 +24,4 @@
       background_opacity = "0.5";
     };
   };
-  
 }

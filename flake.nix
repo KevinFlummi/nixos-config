@@ -17,26 +17,34 @@
     };
   };
 
-  outputs = { self, nixpkgs, dotfiles, home-manager, catppuccin, noctalia, ... }: {
+  outputs = {
+    self,
+    nixpkgs,
+    dotfiles,
+    home-manager,
+    catppuccin,
+    noctalia,
+    ...
+  }: {
     nixosConfigurations.pc = nixpkgs.lib.nixosSystem {
-      system  = "x86_64-linux";
+      system = "x86_64-linux";
       modules = [
         ./hosts/pc/configuration.nix
         home-manager.nixosModules.home-manager
-	      {
-	         home-manager = {
-             useGlobalPkgs = true;
-             useUserPackages = true;
-             extraSpecialArgs = {
-               inherit dotfiles;
-             };
-             users.kevin.imports = [
-               ./home/kevin/home.nix
-               catppuccin.homeModules.catppuccin
-               noctalia.homeModules.default
-             ];
-             backupFileExtension = "backup";
-           };
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = {
+              inherit dotfiles;
+            };
+            users.kevin.imports = [
+              ./home/kevin/home.nix
+              catppuccin.homeModules.catppuccin
+              noctalia.homeModules.default
+            ];
+            backupFileExtension = "backup";
+          };
         }
       ];
     };

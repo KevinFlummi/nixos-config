@@ -1,6 +1,9 @@
-{ config, pkgs, dotfiles, ... }:
-
 {
+  config,
+  pkgs,
+  dotfiles,
+  ...
+}: {
   imports = [
     ../../modules/home/common.nix
     ../../modules/home/terminal.nix
