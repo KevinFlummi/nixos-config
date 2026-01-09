@@ -11,7 +11,6 @@
     sops
     nemo
     niri
-    quickshell
     fastfetch
     xwayland-satellite
   ];
@@ -36,23 +35,25 @@
   };
   programs.zsh = {
     enable = true;
-    oh-my-zsh.enable = false;
     shellAliases = {
       btw = "echo i use NixOS with zsh btw";
     };
   };
   programs.starship = {
     enable = true;
+    enableZshIntegration = true;
   };
   programs.kitty = {
     enable = true;
   };
   programs.noctalia-shell = {
     enable = true;
+    settings = {
+      colorSchemes.predefinedScheme = "Catppuccin Lavender";
+    };
   };
   programs.firefox.enable = true;
 
-  #xdg.configFile."niri".source = ../../modules/config/niri;
   xdg.configFile."niri".source = "${dotfiles}/niri";
 
   home.stateVersion = "25.11";

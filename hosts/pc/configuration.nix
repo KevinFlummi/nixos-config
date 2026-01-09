@@ -29,18 +29,18 @@
   i18n.defaultLocale = "en_US.UTF-8";
   console.keyMap = "de";
 
+  programs.zsh.enable = true;
   users.users.kevin = {
+    shell = pkgs.zsh;
     isNormalUser = true;
     extraGroups = [ "wheel" ];
-    packages = with pkgs; [
-      tree
-    ];
   };
 
   environment.systemPackages = with pkgs; [
     vim
     git
     wget
+    tree
   ];
 
   services.greetd.enable = true;
