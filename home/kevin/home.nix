@@ -4,6 +4,7 @@
   imports = [
     ../../modules/home/common.nix
     ../../modules/home/terminal.nix
+    ../../modules/home/editor.nix
     ../../modules/home/desktop.nix
     ../../modules/home/browser.nix
   ];

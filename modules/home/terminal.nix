@@ -1,13 +1,10 @@
-{ pkgs, dotfiles, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [
     htop
     fastfetch
   ];
-
-  catppuccin.nvim.enable = true;
-  programs.neovim.enable = true;
 
   programs.zsh = {
     enable = true;
@@ -30,5 +27,4 @@
     };
   };
   
-  xdg.configFile."nvim".source = "${dotfiles}/nvim";
 }
