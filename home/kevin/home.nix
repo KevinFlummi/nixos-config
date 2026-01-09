@@ -10,6 +10,7 @@
     age
     sops
     nemo
+    niri
     fastfetch
     xwayland-satellite
   ];
@@ -18,7 +19,7 @@
     enable = true;
     flavor = "mocha";
     firefox.enable = true;
-    gtk.enable = true;
+    gtk.icon.enable = true;
     kitty.enable = true;
     nvim.enable = true;
   };
@@ -34,28 +35,21 @@
   };
   programs.zsh = {
     enable = true;
-    ohMyZsh.enable = false;
-    interactiveShellInit = ''
-      export EDITOR=nvim
-    '';
+    oh-my-zsh.enable = false;
     shellAliases = {
       btw = "echo i use NixOS with zsh btw";
     };
   };
   programs.starship = {
     enable = true;
-    promptInit = true;
   };
   programs.kitty = {
     enable = true;
-    extraConfig = ''
-      shell zsh
-    '';
   };
-  programs.xwayland.enable = true;
+  programs.noctalia-shell = {
+    enable = true;
+  };
   programs.firefox.enable = true;
-  programs.niri.enable = true;
-  programs.noctalia-shell.enable = true;
 
   xdg.configFile."niri".source = ../../modules/config/niri;
 
