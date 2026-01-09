@@ -21,11 +21,11 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1767976652,
-        "narHash": "sha256-i/LObDQxKZt+yDjAdJ7jvqETuyywB65CiCivIEhE1MU=",
+        "lastModified": 1767980220,
+        "narHash": "sha256-K4MsR+ZrKewGhT9w3xyCCPBy0dE6P8AjaYZe/S+myiE=",
         "owner": "KevinFlummi",
         "repo": "dotfiles",
-        "rev": "f9b7bab073e863c2872933ba213d01fe0bcc8de2",
+        "rev": "033df8ebff76fb6c92d1c3975be38c5aa80f38c7",
         "type": "github"
       },
       "original": {
@@ -92,11 +92,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1767974010,
-        "narHash": "sha256-bOUNQIexk0dMeIMX7A1o8M9YbR+CIP+E4irozT/UUIU=",
+        "lastModified": 1767977351,
+        "narHash": "sha256-WOA2lbX/IXPARAwX7LmDflCUjJPzvTeExV6rAwOt6LY=",
         "owner": "noctalia-dev",
         "repo": "noctalia-shell",
-        "rev": "c623beffc01e8feb55a926f959d7f344f0a3834f",
+        "rev": "424c5725de8e04246befd9ca099e66466f6be4f5",
         "type": "github"
       },
       "original": {
