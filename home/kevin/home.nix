@@ -55,7 +55,7 @@
   programs.xwayland.enable = true;
   programs.firefox.enable = true;
   programs.niri.enable = true;
-  programs.noctalia.enable = true;
+  programs.noctalia-shell.enable = true;
 
   xdg.configFile."niri".source = ../../modules/config/niri;
 

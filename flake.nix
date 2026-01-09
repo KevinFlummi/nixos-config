@@ -30,7 +30,7 @@
              users.kevin.imports = [
                ./home/kevin/home.nix
                catppuccin.homeModules.catppuccin
-               noctalia.homeManagerModules.default
+               #noctalia.homeManagerModules.default
              ];
              backupFileExtension = "backup";
            };
