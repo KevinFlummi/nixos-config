@@ -11,6 +11,7 @@
     sops
     nemo
     niri
+    quickshell
     fastfetch
     xwayland-satellite
   ];
