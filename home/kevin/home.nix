@@ -37,6 +37,7 @@
     enable = true;
     shellAliases = {
       btw = "echo i use NixOS with zsh btw";
+      vim = "nvim";
     };
   };
   programs.starship = {
