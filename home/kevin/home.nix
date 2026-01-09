@@ -4,14 +4,12 @@
   home.username = "kevin";
   home.homeDirectory = "/home/kevin";
   #programs.home-manager.enable = true;
-  
-  home.packages = with pkgs; [ 
-    neovim 
+
+  home.packages = with pkgs; [
+    neovim
     htop
-    age 
+    age
     sops
-    walker
-    dunst
     fastfetch
   ];
 
@@ -36,6 +34,6 @@
   };
   xdg.configFile."niri".source = ../../modules/config/niri;
   xdg.configFile."walker".source = ../../modules/config/walker;
-  
+
   home.stateVersion = "25.11";
 }

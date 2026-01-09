@@ -2,7 +2,7 @@
 
 {
   imports =
-    [ 
+    [
       ./hardware-configuration.nix
     ];
 
@@ -11,7 +11,11 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "pc";
+
   networking.networkmanager.enable = true;
+  hardware.bluetooth.enable = true;
+  services.tuned.enable = true;
+  services.upower.enable = true;
   services.openssh.enable = true;
 
   services.pipewire = {
@@ -23,16 +27,6 @@
   i18n.defaultLocale = "en_US.UTF-8";
   console.keyMap = "de";
 
-# services.xserver = {
-#   enable = true;
-#   autoRepeatDelay = 200;
-#   autoRepeatInterval = 35;
-#   xkb.layout = "de";
-#   windowManager.qtile.enable = true;
-# };
-# services.displayManager.ly.enable = true;
-  
-
   users.users.kevin = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
@@ -41,20 +35,19 @@
     ];
   };
 
-
   environment.systemPackages = with pkgs; [
     vim
     git
     wget
     kitty
-    waybar
     xwayland-satellite
-    nemo
+    niri
+    inputs.noctalia.packages.${system}.default
   ];
 
   services.greetd.enable = true;
-  services.greetd.settings.default_session = { 
-    command = "${pkgs.niri}/bin/niri-session"; 
+  services.greetd.settings.default_session = {
+    command = "${pkgs.niri}/bin/niri-session";
     user = "kevin";
   };
   programs.xwayland.enable = true;
@@ -64,6 +57,7 @@
   services.gvfs.enable = true;
   services.tumbler.enable = true;
   fonts.packages = with pkgs; [
+    inter
     nerd-fonts.jetbrains-mono
   ];
 

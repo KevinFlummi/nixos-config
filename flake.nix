@@ -2,11 +2,20 @@
   description = "NixOS Base Setup";
   inputs = {
     self.submodules = true;
-    nixpkgs.url = "nixpkgs/nixos-25.11";
-      home-manager = {
-        url = "github:nix-community/home-manager/release-25.11";
-        inputs.nixpkgs.follows = "nixpkgs";
-      };
+    nixpkgs.url = "nixpkgs/nixos-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    quickshell = {
+      url = "github:outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.quickshell.follows = "quickshell";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }: {
@@ -15,13 +24,13 @@
       modules = [
         ./hosts/pc/configuration.nix
         home-manager.nixosModules.home-manager
-	{
-	  home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            users.kevin = import ./home/kevin/home.nix;
-            backupFileExtension = "backup";
-          };
+	      {
+	         home-manager = {
+             useGlobalPkgs = true;
+             useUserPackages = true;
+             users.kevin = import ./home/kevin/home.nix;
+             backupFileExtension = "backup";
+           };
         }
       ];
     };
