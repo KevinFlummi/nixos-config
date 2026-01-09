@@ -26,9 +26,9 @@
 
   programs.git = {
     enable = true;
-    userName = "Kevin Ferneding";
-    userEmail = "email@kevinferneding.xyz";
-    extraConfig = {
+    settings = {
+      user.name = "Kevin Ferneding";
+      user.email = "email@kevinferneding.xyz";
       init.defaultBranch = "main";
       pull.rebase = true;
     };
