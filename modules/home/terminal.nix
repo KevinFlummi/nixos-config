@@ -7,28 +7,7 @@
   ];
 
   catppuccin.nvim.enable = true;
-  programs.neovim = {
-    enable = true;
-  
-    extraPackages = with pkgs; [
-      # NixOS / Linux config
-      nil
-      bash-language-server
-  
-      # Programming languages
-      lua-language-server
-      pyright
-      rust-analyzer
-      gopls
-      clang-tools
-  
-      # DevOps
-      dockerfile-language-server
-  
-      # Documentation
-      marksman
-    ];
-  };
+  programs.neovim.enable = true;
 
   programs.zsh = {
     enable = true;
