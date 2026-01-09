@@ -18,6 +18,22 @@
         "type": "github"
       }
     },
+    "dotfiles": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1767969157,
+        "narHash": "sha256-Y7kbNevwHc4r8c8wLRUd0+ml9IoH9OUefdtBdd+J5fg=",
+        "owner": "KevinFlummi",
+        "repo": "dotfiles",
+        "rev": "50ac619433c18e1411ad78ac540765854bd11e59",
+        "type": "github"
+      },
+      "original": {
+        "owner": "KevinFlummi",
+        "repo": "dotfiles",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -92,6 +108,7 @@
     "root": {
       "inputs": {
         "catppuccin": "catppuccin",
+        "dotfiles": "dotfiles",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs_2",
         "noctalia": "noctalia"

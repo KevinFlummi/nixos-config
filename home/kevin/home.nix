@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, dotfiles, ... }:
 
 {
   home.username = "kevin";
@@ -51,7 +51,8 @@
   };
   programs.firefox.enable = true;
 
-  xdg.configFile."niri".source = ../../modules/config/niri;
+  #xdg.configFile."niri".source = ../../modules/config/niri;
+  xdg.configFile."niri".source = "${dotfiles}/niri";
 
   home.stateVersion = "25.11";
 }

@@ -1,6 +1,10 @@
 {
   description = "NixOS Base Setup";
   inputs = {
+    dotfiles = {
+      url = "github:KevinFlummi/dotfiles";
+      flake = false;
+    };
     nixpkgs.url = "nixpkgs/nixos-unstable";
     catppuccin.url = "github:catppuccin/nix";
     home-manager = {
@@ -17,7 +21,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, noctalia, ... }: {
+  outputs = { self, nixpkgs, dotfiles, home-manager, catppuccin, noctalia, ... }: {
     nixosConfigurations.pc = nixpkgs.lib.nixosSystem {
       system  = "x86_64-linux";
       modules = [
@@ -27,6 +31,9 @@
 	         home-manager = {
              useGlobalPkgs = true;
              useUserPackages = true;
+             extraSpecialArgs = {
+               inherit dotfiles;
+             };
              users.kevin.imports = [
                ./home/kevin/home.nix
                catppuccin.homeModules.catppuccin
