@@ -2,15 +2,12 @@
 
 {
   home.packages = with pkgs; [
+    neovim
     htop
     fastfetch
   ];
 
   catppuccin.nvim.enable = true;
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
 
   programs.zsh = {
     enable = true;
