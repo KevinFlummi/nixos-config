@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, dotfiles, ... }:
 
 {
   home.packages = with pkgs; [
@@ -32,4 +32,6 @@
       background_opacity = "0.5";
     };
   };
+  
+  xdg.configFile."nvim".source = "${dotfiles}/nvim";
 }

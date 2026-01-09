@@ -12,5 +12,5 @@
   };
 
   xdg.configFile."niri".source = "${dotfiles}/niri";
-  xdg.configFile."noctalia-shell".source = "${dotfiles}/noctalia";
+  xdg.configFile."noctalia".source = "${dotfiles}/noctalia";
 }
