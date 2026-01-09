@@ -1,11 +1,20 @@
-{ pkgs, dotfiles, ... }:
-
 {
+  pkgs,
+  dotfiles,
+  ...
+}: {
   home.packages = with pkgs; [
-    nemo
     niri
     xwayland-satellite
   ];
+
+  programs.thunar = {
+    enable = true;
+    plugins = with pkgs.xfce; [
+      thunar-archive-plugin
+      thunar-media-tags-plugin
+      thunar-volman
+    ]
 
   programs.noctalia-shell = {
     enable = true;
