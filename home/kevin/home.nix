@@ -21,7 +21,7 @@
     gtk.enable = true;
     kitty.enable = true;
     nvim.enable = true;
-  }
+  };
 
   programs.git = {
     enable = true;
