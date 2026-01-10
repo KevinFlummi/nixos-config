@@ -21,6 +21,7 @@
   services.openssh.enable = true;
   services.gvfs.enable = true;
   services.tumbler.enable = true;
+  programs.dconf.enable = true;
 
   services.pipewire = {
     enable = true;
@@ -39,10 +40,21 @@
   };
 
   environment.systemPackages = with pkgs; [
+    fd
     vim
     git
+    curl
     wget
     tree
+    nmap
+    ripgrep
+    btop
+    gnupg
+    make
+    zip
+    unzip
+    rar
+    unrar
   ];
 
   services.greetd.enable = true;

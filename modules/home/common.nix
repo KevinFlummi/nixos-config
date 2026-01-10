@@ -5,15 +5,15 @@
   ...
 }: {
   home.packages = with pkgs; [
-    age
-    sops
+    sl # steam locomotive
+    age # encryption
+    sops # encryption
+    ffmpeg-full # codecs
   ];
 
   catppuccin = {
     enable = true;
     flavor = "mocha";
-    cursors.enable = true;
-    cursors.accent = "mauve";
   };
 
   programs.git = {
