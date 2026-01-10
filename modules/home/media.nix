@@ -1,5 +1,4 @@
 {
-  pkgs,
   config,
   pkgs,
   dotfiles,
@@ -11,7 +10,7 @@
     gimp
     yt-dlp
     ffmpeg-full
-    kdenlive
+    kdePackages.kdenlive
     audacity
     obs-studio
     spotify-player
