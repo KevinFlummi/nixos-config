@@ -10,6 +10,7 @@
     ../../modules/home/editor.nix
     ../../modules/home/desktop.nix
     ../../modules/home/browser.nix
+    ../../modules/home/media.nix
   ];
 
   home.username = "kevin";
