@@ -50,7 +50,7 @@
     ripgrep
     btop
     gnupg
-    make
+    gnumake
     zip
     unzip
     rar
