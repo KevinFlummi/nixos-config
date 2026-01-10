@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     niri # wm
     xwayland-satellite # port x-dependencies
+    libsForQt5.qt5ct # qt thingy
     catppuccin-gtk # theme
     catppuccin-qt5ct # theme
     catppuccin-kvantum # theme
@@ -18,6 +19,8 @@
     thunar-media-tags-plugin # see media metadata
     thunar-volman # mounting
   ];
+
+  home.sessionVariables.QT_QPA_PLATFORMTHEME = "qt5ct";
 
   catppuccin = {
     cursors.enable = true;
@@ -33,6 +36,10 @@
       name = "catppuccin-frappe-blue-standard";
       package = pkgs.catppuccin-gtk;
     };
+  };
+
+  programs.noctalia-shell = {
+    enable = true;
   };
 
   xdg.configFile."niri".source = "${dotfiles}/niri";

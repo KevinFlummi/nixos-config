@@ -7,7 +7,6 @@
   imports = [
     ./hardware-configuration.nix
   ];
-
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -39,6 +38,7 @@
     extraGroups = ["wheel"];
   };
 
+  nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     fd
     vim
@@ -55,6 +55,7 @@
     unzip
     rar
     unrar
+    fastfetch
   ];
 
   services.greetd.enable = true;
