@@ -10,6 +10,8 @@
     thunar-archive-plugin
     thunar-media-tags-plugin
     thunar-volman
+    catppuccin-kde
+    catppuccin-gtk
   ];
 
   programs.noctalia-shell = {
