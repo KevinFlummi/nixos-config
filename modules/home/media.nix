@@ -10,9 +10,8 @@
     kdePackages.kdenlive
     audacity
     obs-studio
-    spotify-player
+    spotify
   ];
 
   catppuccin.obs.enable = true;
-  catppuccin.spotify-player.enable = true;
 }
