@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   # the only two relevant fonts
   fonts.packages = with pkgs; [
     inter

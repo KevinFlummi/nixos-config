@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   # minimalist login manager
   services.greetd.enable = true;
   services.greetd.settings.default_session = {
