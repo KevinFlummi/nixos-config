@@ -78,9 +78,7 @@
   # minimalist login manager
   services.greetd.enable = true;
   services.greetd.settings.default_session = {
-    command = "${pkgs.tuigreet}/bin/tuigreet --time 
-    --user-menu --user-menu-min-uid 1000 --user-menu-max-uid 1005
-    --cmd ${pkgs.niri}/bin/niri-session";
+    command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd ${pkgs.niri}/bin/niri-session";
     user = "greeter";
   };
 
