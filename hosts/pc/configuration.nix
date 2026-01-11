@@ -13,6 +13,10 @@
 
   networking.hostName = "pc";
 
+  # allow proprietary garbage
+  nixpkgs.config.allowUnfree = true;
+
+  # some services
   networking.networkmanager.enable = true;
   hardware.bluetooth.enable = true;
   services.tuned.enable = true;
@@ -22,15 +26,29 @@
   services.tumbler.enable = true;
   programs.dconf.enable = true;
 
+  # graphics drivers
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
+  hardware.graphics.enable = true;
+  services.xserver.videoDrivers = ["nvidia"];
+  hardware.nvidia.open = false;
+  hardware.nvidia.modesetting.enable = true;
+
+  # audio
   services.pipewire = {
     enable = true;
     pulse.enable = true;
   };
 
+  # locale
   time.timeZone = "Europe/Berlin";
   i18n.defaultLocale = "en_US.UTF-8";
   console.keyMap = "de";
 
+  # zsh for kevin
   programs.zsh.enable = true;
   users.users.kevin = {
     shell = pkgs.zsh;
@@ -38,7 +56,6 @@
     extraGroups = ["wheel"];
   };
 
-  nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     fd
     vim
@@ -58,13 +75,17 @@
     fastfetch
   ];
 
+  # minimalist login manager
   services.greetd.enable = true;
   services.greetd.settings.default_session = {
-    command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd ${pkgs.niri}/bin/niri-session";
-    user = "kevin";
+    command = "${pkgs.tuigreet}/bin/tuigreet --time 
+    --user-menu --user-menu-min-uid 1000 --user-menu-max-uid 1005
+    --cmd ${pkgs.niri}/bin/niri-session";
+    user = "greeter";
   };
   programs.xwayland.enable = true;
 
+  # the only two relevant fonts
   fonts.packages = with pkgs; [
     inter
     nerd-fonts.jetbrains-mono
