@@ -22,10 +22,9 @@
         "root"
       ];
     };
-    extraConfig = ''
-      bindkey -v
-      unsetopt beep
-    '';
+    initContent = "bindkey -v";
+    defaultKeymap = "viins";
+    setOptions = ["NO_BEEP"];
   };
 
   programs.starship = {
