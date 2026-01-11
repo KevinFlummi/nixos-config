@@ -11,6 +11,8 @@
     ../../modules/home/desktop.nix
     ../../modules/home/browser.nix
     ../../modules/home/media.nix
+    ../../modules/home/gaming.nix
+    ../../modules/home/socials.nix
   ];
 
   home.username = "kevin";
