@@ -84,17 +84,15 @@
 
   # wayland ports
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  environment.sessionVariables.GTK_APPLICATION_PREFER_DARK_THEME = "1";
   programs.xwayland.enable = true;
   xdg.portal = {
     enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-wlr
-      pkgs.xdg-desktop-portal-gtk
     ];
     config = {
       common = {
-        default = ["wlr" "gtk"];
+        default = ["wlr"];
       };
     };
   };

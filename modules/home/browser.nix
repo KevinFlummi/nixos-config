@@ -3,7 +3,10 @@
   pkgs,
   ...
 }: {
-  catppuccin.firefox.enable = true;
+  catppuccin.firefox = {
+    enable = true;
+    force = true;
+  };
   programs.firefox = {
     enable = true;
 
@@ -37,23 +40,17 @@
       # UI and Behavior
       DisplayMenuBar = "never";
       DontCheckDefaultBrowser = true;
-      HardwareAcceleration = false;
+      HardwareAcceleration = true;
       OfferToSaveLogins = false;
       DefaultDownloadDirectory = "${config.home.homeDirectory}/Downloads";
 
       ExtensionSettings = let
         moz = short: "https://addons.mozilla.org/firefox/downloads/latest/${short}/latest.xpi";
       in {
-        #"*".installation_mode = "blocked";
+        "*".installation_mode = "allowed";
 
         "uBlock0@raymondhill.net" = {
           install_url = moz "ublock-origin";
-          installation_mode = "force_installed";
-          updates_disabled = true;
-        };
-
-        "{76aabc99-c1a8-4c1e-832b-d4f2941d5a7a}" = {
-          install_url = moz "catppuccin-mocha-mauve-git";
           installation_mode = "force_installed";
           updates_disabled = true;
         };
@@ -74,6 +71,11 @@
         };
         "{74145f27-f039-47ce-a470-a662b129930a}" = {
           install_url = moz "clearurls";
+          installation_mode = "force_installed";
+          updates_disabled = true;
+        };
+        "{addon@darkreader.org}" = {
+          install_url = moz "darkreader";
           installation_mode = "force_installed";
           updates_disabled = true;
         };

@@ -28,6 +28,7 @@
     qt5ct.enable = true;
     kvantum.enable = true;
     kvantum.apply = true;
+    thunderbird.enable = true;
   };
 
   gtk = {
