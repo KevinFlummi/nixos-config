@@ -36,12 +36,12 @@
       name = "catppuccin-frappe-blue-standard";
       package = pkgs.catppuccin-gtk;
     };
-    gtk3.extraConfig = {
-      gtk-application-prefer-dark-theme = 1;
-    };
-    gtk4.extraConfig = {
-      gtk-application-prefer-dark-theme = 1;
-    };
+  };
+
+  qt = {
+    enable = true;
+    platformTheme.name = "qtct";
+    style.name = "kvantum";
   };
 
   programs.noctalia-shell = {
