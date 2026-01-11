@@ -44,7 +44,7 @@
       ExtensionSettings = let
         moz = short: "https://addons.mozilla.org/firefox/downloads/latest/${short}/latest.xpi";
       in {
-        "*".installation_mode = "blocked";
+        #"*".installation_mode = "blocked";
 
         "uBlock0@raymondhill.net" = {
           install_url = moz "ublock-origin";
@@ -147,6 +147,8 @@
       };
 
       settings = {
+        # Startup
+        "browser.startup.page" = 3;
         # Fingerprinting
         "privacy.partition.network_state" = true;
         "privacy.partition.serviceWorkers" = true;
@@ -157,7 +159,7 @@
         "privacy.trackingprotection.cryptomining.enabled" = true;
         "privacy.trackingprotection.emailtracking.enabled" = true;
         # Cookies & Cache
-        "network.cookie.cookieBehavior" = 1;
+        "network.cookie.cookieBehavior" = 4;
         "browser.cache.cache_isolation" = true;
         # Networking
         "dom.security.https_only_mode" = true;
