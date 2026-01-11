@@ -12,6 +12,4 @@
     obs-studio
     spotify
   ];
-
-  catppuccin.obs.enable = true;
 }
