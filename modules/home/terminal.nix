@@ -22,6 +22,10 @@
         "root"
       ];
     };
+    extraConfig = ''
+      bindkey -v
+      unsetopt beep
+    '';
   };
 
   programs.starship = {
