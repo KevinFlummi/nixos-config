@@ -35,9 +35,12 @@
   # (tbd: add cuda support)
 
   # audio
+  security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
     pulse.enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
   };
 
   # locale
@@ -80,7 +83,17 @@
     --cmd ${pkgs.niri}/bin/niri-session";
     user = "greeter";
   };
+
+  # wayland ports
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
   programs.xwayland.enable = true;
+  xdg.portal = {
+    enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-wlr
+      pkgs.xdg-desktop-portal-gtk
+    ];
+  };
 
   # the only two relevant fonts
   fonts.packages = with pkgs; [
