@@ -1,13 +1,16 @@
-{
-  services.xserver.enable = true;
-
-  services.displayManager.ly = {
+{pkgs, ...}: {
+  services.greetd = {
     enable = true;
     settings = {
-      animate = true;
-      clock = true;
-      save = true;
-      default_user = "kevin";
+      initial_session = {
+        command = "${pkgs.niri}/bin/niri-session";
+        user = "kevin";
+      };
+
+      default_session = {
+        command = "${pkgs.tuigreet}/bin/tuigreet -t -r --remember-user-session";
+        user = "greeter";
+      };
     };
   };
 }
