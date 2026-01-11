@@ -6,6 +6,11 @@
       vim = "nvim";
       cl = "clear";
       nrb = "sudo nixos-rebuild switch --flake";
+      nup = "nix flake update";
+      gits = "git status";
+      gitc = "git commit";
+      gitps = "git push";
+      gitpl = "git pull";
     };
   };
 
