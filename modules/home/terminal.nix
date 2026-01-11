@@ -12,6 +12,16 @@
       gitps = "git push";
       gitpl = "git pull";
     };
+    autosuggestion.enable = true;
+    syntaxHighlighting = {
+      enable = true;
+      package = pkgs.zsh-syntax-highlighting;
+      highlighters = [
+        "main"
+        "brackets"
+        "root"
+      ];
+    };
   };
 
   programs.starship = {
