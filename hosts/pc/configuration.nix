@@ -7,10 +7,11 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos/boot.nix
+    ../../modules/nixos/services.nix
     ../../modules/nixos/cmdutils.nix
     ../../modules/nixos/locale.nix
     ../../modules/nixos/audio.nix
-    ../../modules/nixos/audio.nix
+    ../../modules/nixos/users.nix
     ../../modules/nixos/graphics.nix
     ../../modules/nixos/login.nix
     ../../modules/nixos/wayland.nix
@@ -22,16 +23,6 @@
 
   # allow proprietary garbage
   nixpkgs.config.allowUnfree = true;
-
-  # some services
-  networking.networkmanager.enable = true;
-  hardware.bluetooth.enable = true;
-  services.tuned.enable = true;
-  services.upower.enable = true;
-  services.openssh.enable = true;
-  services.gvfs.enable = true;
-  services.tumbler.enable = true;
-  programs.dconf.enable = true;
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
