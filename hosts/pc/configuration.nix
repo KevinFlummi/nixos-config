@@ -6,11 +6,17 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    ../../modules/nixos/boot.nix
+    ../../modules/nixos/cmdutils.nix
+    ../../modules/nixos/locale.nix
+    ../../modules/nixos/audio.nix
+    ../../modules/nixos/audio.nix
+    ../../modules/nixos/graphics.nix
+    ../../modules/nixos/login.nix
+    ../../modules/nixos/wayland.nix
+    ../../modules/nixos/fonts.nix
     ../../modules/nixos/gaming.nix
   ];
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "pc";
 
@@ -26,90 +32,6 @@
   services.gvfs.enable = true;
   services.tumbler.enable = true;
   programs.dconf.enable = true;
-
-  # graphics drivers
-  hardware.graphics.enable = true;
-  services.xserver.videoDrivers = ["nvidia"];
-  hardware.nvidia.open = false;
-  hardware.nvidia.modesetting.enable = true;
-  # (tbd: add cuda support)
-
-  # audio
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-  };
-
-  # locale
-  time.timeZone = "Europe/Berlin";
-  i18n.defaultLocale = "en_US.UTF-8";
-  console.keyMap = "de";
-
-  # zsh for kevin
-  programs.zsh.enable = true;
-  users.users.kevin = {
-    shell = pkgs.zsh;
-    isNormalUser = true;
-    extraGroups = ["wheel"];
-  };
-
-  environment.systemPackages = with pkgs; [
-    fd
-    vim
-    git
-    curl
-    wget
-    tree
-    nmap
-    ripgrep
-    btop
-    gnupg
-    gnumake
-    zip
-    unzip
-    rar
-    unrar
-    fastfetch
-  ];
-
-  # minimalist login manager
-  services.greetd.enable = true;
-  services.greetd.settings.default_session = {
-    command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd ${pkgs.niri}/bin/niri-session";
-    user = "greeter";
-  };
-
-  # wayland ports
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  programs.xwayland.enable = true;
-  xdg.portal = {
-    enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-wlr
-    ];
-    config = {
-      common = {
-        default = ["wlr"];
-      };
-    };
-  };
-
-  # the only two relevant fonts
-  fonts.packages = with pkgs; [
-    inter
-    nerd-fonts.jetbrains-mono
-  ];
-  fonts.fontconfig = {
-    enable = true;
-    defaultFonts = {
-      serif = ["Inter"];
-      sansSerif = ["Inter"];
-      monospace = ["JetBrainsMono Nerd Font"];
-    };
-  };
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
