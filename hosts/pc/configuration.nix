@@ -7,7 +7,8 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos/boot.nix
-    ../../modules/nixos/services.nix
+    ../../modules/nixos/connectivity.nix
+    ../../modules/nixos/system.nix
     ../../modules/nixos/cmdutils.nix
     ../../modules/nixos/locale.nix
     ../../modules/nixos/audio.nix
