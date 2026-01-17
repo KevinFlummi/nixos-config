@@ -3,7 +3,6 @@
     enable = true;
     shellAliases = {
       btw = "echo i use NixOS with zsh btw";
-      vim = "nvim";
       cl = "clear";
       nrb = "sudo nixos-rebuild switch --flake";
       nup = "nix flake update";
