@@ -71,9 +71,12 @@
 
 # Open Tasks
 
-- nextcloud integration (nextcloud-client or as network mount?)
 - get latex setup in nvim to work (+ move latex pkgs from research to editor)
+- nextcloud integration (nextcloud-client or as network mount?)
 - organize colorscheme in separate module
 - figure out how to (partially) use it on macos
 - noctalia screenrecorder plugin: add widget for the -r tag (shadowplay-esque)
 - keyboard layout mine setup (+ repair linear kbd l key) (+ print heavier case)
+- niri set up named workspaces: work, fun, aux, bg
+- learn about tmux
+- reorganize everything (tbd: find out how it makes sense)
