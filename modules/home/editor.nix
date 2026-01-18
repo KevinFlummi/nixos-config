@@ -14,6 +14,7 @@
     marksman # Markdown
     rust-analyzer # Rust
     llvmPackages.clangWithLibcAndBasicRtAndLibcxx # C / C++ / ObjC
+    texlab # LaTeX
     #######################################
     # Formatters
     #######################################
@@ -26,6 +27,7 @@
     rustfmt # Rust
     clang-tools # C / C++ / ObjC
     dockfmt # Docker
+    texlivePackages.latexindent # LaTeX
   ];
 
   programs.neovim = {
@@ -68,6 +70,7 @@
       nvim-treesitter-parsers.cpp
       nvim-treesitter-parsers.dockerfile
       undotree
+      vimtex
     ];
   };
   xdg.configFile."nvim".source = "${dotfiles}/nvim";

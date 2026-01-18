@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  dotfiles,
-  ...
-}: {
+{...}: {
   imports = [
     ../../modules/home/common.nix
     ../../modules/home/terminal.nix
@@ -13,6 +8,7 @@
     ../../modules/home/media.nix
     ../../modules/home/gaming.nix
     ../../modules/home/socials.nix
+    ../../modules/home/research.nix
   ];
 
   home.username = "kevin";
