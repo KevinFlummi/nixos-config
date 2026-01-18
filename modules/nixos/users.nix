@@ -8,6 +8,6 @@
   users.users.kevin = {
     shell = pkgs.zsh;
     isNormalUser = true;
-    extraGroups = ["wheel"];
+    extraGroups = ["wheel" "networkmanager"];
   };
 }
