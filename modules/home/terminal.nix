@@ -21,6 +21,13 @@
         "root"
       ];
     };
+    history = {
+      path = "$HOME/.zsh_history";
+      size = 10000;
+      save = 10000;
+      append = true;
+      share = false;
+    };
     initContent = "bindkey -v";
     defaultKeymap = "viins";
     setOptions = ["NO_BEEP"];
