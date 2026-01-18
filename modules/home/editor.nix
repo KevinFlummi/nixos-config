@@ -1,10 +1,22 @@
 {
-  config,
   pkgs,
   dotfiles,
   ...
 }: {
   home.packages = with pkgs; [
+    #######################################
+    # Language servers
+    #######################################
+    ty # Python
+    nixd # Nix
+    bash-language-server # Shell
+    lua-language-server # Lua
+    marksman # Markdown
+    rust-analyzer # Rust
+    llvmPackages.clangWithLibcAndBasicRtAndLibcxx # C / C++ / ObjC
+    #######################################
+    # Formatters
+    #######################################
     ruff # Python
     alejandra # Nix
     shfmt # Shell
@@ -33,6 +45,7 @@
       nvim-autopairs
       cellular-automaton-nvim
       nvim-colorizer-lua
+      blink-cmp
       conform-nvim
       vim-fugitive
       lualine-nvim
