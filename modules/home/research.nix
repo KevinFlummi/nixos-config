@@ -1,8 +1,9 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     zotero
-    texliveMedium
     pandoc
+    texliveFull
+    bibtex2html
     languagetool
     aspell
     aspellDicts.en
