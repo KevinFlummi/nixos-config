@@ -6,6 +6,7 @@
     ../../modules/home/desktop.nix
     ../../modules/home/browser.nix
     ../../modules/home/media.nix
+    ../../modules/home/nextcloud.nix
     ../../modules/home/gaming.nix
     ../../modules/home/socials.nix
     ../../modules/home/research.nix
