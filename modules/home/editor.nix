@@ -28,6 +28,13 @@
     clang-tools # C / C++ / ObjC
     dockfmt # Docker
     texlivePackages.latexindent # LaTeX
+    #######################################
+    # Other tools
+    #######################################
+    zathura # PDF viewer
+    aspell # Spell checker
+    aspellDicts.en # English dictionary
+    aspellDicts.de # German dictionary
   ];
 
   programs.neovim = {
