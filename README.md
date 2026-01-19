@@ -44,6 +44,7 @@
       - socials.nix
       - terminal.nix
       - research.nix
+      - nextcloud.nix
     - dotfiles % submodule of my dotfiles for all necessary xdg configuration
   - home/
     - kevin/ % one folder for each user instance, in here we import modules based on user prefs
@@ -71,12 +72,10 @@
 
 # Open Tasks
 
-- get latex setup in nvim to work (+ move latex pkgs from research to editor)
-- nextcloud integration (nextcloud-client or as network mount?)
-- organize colorscheme in separate module
-- figure out how to (partially) use it on macos
 - noctalia screenrecorder plugin: add widget for the -r tag (shadowplay-esque)
 - keyboard layout mine setup (+ repair linear kbd l key) (+ print heavier case)
-- niri set up named workspaces: work, fun, aux, bg
-- learn about tmux
+- learn tmux
+- organize colorscheme in separate module
 - reorganize everything (tbd: find out how it makes sense)
+- niri set up named workspaces: work, fun, aux, bg
+- figure out how to (partially) use it on macos
