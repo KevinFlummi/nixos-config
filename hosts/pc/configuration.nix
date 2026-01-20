@@ -7,13 +7,14 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos/boot.nix
-    ../../modules/nixos/connectivity.nix
+    ../../modules/nixos/bluetooth.nix
+    ../../modules/nixos/wifi.nix
     ../../modules/nixos/system.nix
     ../../modules/nixos/cmdutils.nix
     ../../modules/nixos/locale.nix
     ../../modules/nixos/audio.nix
     ../../modules/nixos/users.nix
-    ../../modules/nixos/graphics.nix
+    ../../modules/nixos/nvidia.nix
     ../../modules/nixos/login.nix
     ../../modules/nixos/wayland.nix
     ../../modules/nixos/fonts.nix

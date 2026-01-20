@@ -39,7 +39,7 @@
               inherit dotfiles;
             };
             users.kevin.imports = [
-              ./home/kevin/home.nix
+              ./home/kevin.nix
               catppuccin.homeModules.catppuccin
               noctalia.homeModules.default
             ];

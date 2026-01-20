@@ -11,11 +11,6 @@
     ffmpeg-full # codecs
   ];
 
-  catppuccin = {
-    enable = true;
-    flavor = "mocha";
-  };
-
   programs.git = {
     enable = true;
     settings = {

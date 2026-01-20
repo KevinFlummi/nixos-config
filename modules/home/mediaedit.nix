@@ -10,7 +10,5 @@
     kdePackages.kdenlive
     audacity
     obs-studio
-    gpu-screen-recorder
-    spotify
   ];
 }

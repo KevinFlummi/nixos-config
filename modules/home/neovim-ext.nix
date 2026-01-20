@@ -38,27 +38,14 @@
   ];
 
   programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    viAlias = true;
-    vimAlias = true;
     plugins = with pkgs.vimPlugins; [
       # generic
-      plenary-nvim
       vim-be-good
       copilot-vim
-      # themes
-      catppuccin-nvim
-      rose-pine
       # separate
-      nvim-autopairs
       cellular-automaton-nvim
-      nvim-colorizer-lua
       blink-cmp
       conform-nvim
-      vim-fugitive
-      lualine-nvim
-      telescope-nvim
       nvim-treesitter
       nvim-treesitter-parsers.python
       nvim-treesitter-parsers.nix
@@ -76,9 +63,7 @@
       nvim-treesitter-parsers.c
       nvim-treesitter-parsers.cpp
       nvim-treesitter-parsers.dockerfile
-      undotree
       vimtex
     ];
   };
-  xdg.configFile."nvim".source = "${dotfiles}/nvim";
 }

@@ -3,10 +3,6 @@
   pkgs,
   ...
 }: {
-  catppuccin.firefox = {
-    enable = true;
-    force = true;
-  };
   programs.firefox = {
     enable = true;
 
