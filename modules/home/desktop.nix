@@ -12,8 +12,8 @@
     thunar-media-tags-plugin # see media metadata
     thunar-volman # mounting
     thunderbird # email client
-    gpu-screen-recorder # screen recording
     spotify # music player
+    gpu-screen-recorder # screen recording
   ];
 
   programs.noctalia-shell = {
