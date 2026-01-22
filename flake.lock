@@ -21,11 +21,11 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1768924371,
-        "narHash": "sha256-cjLqqOO1amSqcMaHWM7OGJ/g8goWsWV9C7v5HBTUYgU=",
+        "lastModified": 1769112648,
+        "narHash": "sha256-R1yVJqrChAgIFYsbQRRsjERPRPvVakPXxc5G/Va3uqs=",
         "owner": "KevinFlummi",
         "repo": "dotfiles",
-        "rev": "18ef8424f7a453c481ffc042fc55f60a034b1e98",
+        "rev": "251c0d10a298eb697963681d4c992a62ab81ffbe",
         "type": "github"
       },
       "original": {
