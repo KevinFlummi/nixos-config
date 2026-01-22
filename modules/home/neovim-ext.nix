@@ -66,6 +66,7 @@
       nvim-treesitter-parsers.cpp
       nvim-treesitter-parsers.haskell
       nvim-treesitter-parsers.dockerfile
+      nvim-lspconfig
       vimtex
     ];
   };
