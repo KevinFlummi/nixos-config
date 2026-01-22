@@ -13,7 +13,7 @@
     thunar-volman # mounting
     thunderbird # email client
     spotify # music player
-    gpu-screen-recorder # screen recording
+    #gpu-screen-recorder # screen recording
   ];
 
   programs.noctalia-shell = {
@@ -22,15 +22,19 @@
 
   programs.mpv.enable = true; # media player
 
-  # todo: move thunderbird config to homemgr
-  #programs.thunderbird.enable = true; # email client
-
   # password manager
   programs.keepassxc = {
     enable = true;
     autostart = true;
     settings = {
-      FdoSecrets.Enabled = true;
+      Security = {
+        LockDatabaseIdle = false;
+      };
+      FdoSecrets = {
+        Enabled = true;
+        ConfirmAccessItem = false;
+        UnlockBeforeSearch = false;
+      };
       Browser = {
         Enabled = true;
       };
