@@ -14,6 +14,7 @@
     marksman # Markdown
     rust-analyzer # Rust
     llvmPackages.clangWithLibcAndBasicRtAndLibcxx # C / C++ / ObjC
+    haskell-language-server # Haskell
     texlab # LaTeX
     #######################################
     # Formatters
@@ -26,6 +27,7 @@
     taplo # TOML
     rustfmt # Rust
     clang-tools # C / C++ / ObjC
+    ormolu # Haskell
     dockfmt # Docker
     texlivePackages.latexindent # LaTeX
     #######################################
@@ -62,6 +64,7 @@
       nvim-treesitter-parsers.rust
       nvim-treesitter-parsers.c
       nvim-treesitter-parsers.cpp
+      nvim-treesitter-parsers.haskell
       nvim-treesitter-parsers.dockerfile
       vimtex
     ];
