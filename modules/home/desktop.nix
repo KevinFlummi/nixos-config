@@ -25,7 +25,7 @@
   # password manager
   programs.keepassxc = {
     enable = true;
-    autostart = true;
+    autostart = false; # niri handles autostart
     settings = {
       Security = {
         LockDatabaseIdle = false;
