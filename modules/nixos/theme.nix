@@ -16,14 +16,14 @@
         name = "JetBrainsMono Nerd Font";
       };
     };
-    cursor = {
-      package = pkgs.rose-pine-cursor;
-      name = "Rose Pine";
-    };
+    #cursor = {
+    #  package = pkgs.rose-pine-cursor;
+    #  name = "BreezeX-RoséPine";
+    #};
     opacity = {
-      terminal = 0.8;
-      desktop = 0.8;
-      application = 0.8;
+      terminal = 0.85;
+      desktop = 0.85;
+      applications = 0.85;
       popups = 1.0;
     };
   };

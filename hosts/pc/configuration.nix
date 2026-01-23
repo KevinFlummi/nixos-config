@@ -17,7 +17,7 @@
     ../../modules/nixos/nvidia.nix
     ../../modules/nixos/login.nix
     ../../modules/nixos/wayland.nix
-    ../../modules/nixos/fonts.nix
+    ../../modules/nixos/theme.nix
     ../../modules/nixos/gaming.nix
   ];
 

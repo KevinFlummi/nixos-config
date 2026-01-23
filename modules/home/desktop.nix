@@ -13,7 +13,6 @@
     thunar-volman # mounting
     thunderbird # email client
     spotify # music player
-    #gpu-screen-recorder # screen recording
   ];
 
   programs.noctalia-shell = {
@@ -48,5 +47,5 @@
   xdg.autostart.enable = true;
 
   xdg.configFile."niri".source = "${dotfiles}/niri";
-  xdg.configFile."noctalia".source = "${dotfiles}/noctalia";
+  #xdg.configFile."noctalia".source = "${dotfiles}/noctalia";
 }

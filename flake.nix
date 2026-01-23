@@ -6,7 +6,10 @@
       flake = false;
     };
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    catppuccin.url = "github:catppuccin/nix";
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -18,11 +21,10 @@
   };
 
   outputs = {
-    self,
     nixpkgs,
     dotfiles,
     home-manager,
-    catppuccin,
+    stylix,
     noctalia,
     ...
   }: {
@@ -32,6 +34,7 @@
         inherit dotfiles;
       };
       modules = [
+        stylix.nixosModules.stylix
         ./hosts/pc/configuration.nix
         home-manager.nixosModules.home-manager
         {
@@ -43,7 +46,6 @@
             };
             users.kevin.imports = [
               ./home/kevin.nix
-              catppuccin.homeModules.catppuccin
               noctalia.homeModules.default
             ];
             backupFileExtension = "backup";

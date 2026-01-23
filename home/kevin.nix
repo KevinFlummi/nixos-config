@@ -6,7 +6,6 @@
     ../modules/home/neovim.nix
     ../modules/home/neovim-ext.nix
     ../modules/home/desktop.nix
-    ../modules/home/themes.nix
     ../modules/home/firefox.nix
     ../modules/home/media-edit.nix
     ../modules/home/nextcloud.nix
