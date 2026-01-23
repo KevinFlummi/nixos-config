@@ -3,6 +3,10 @@
   pkgs,
   ...
 }: {
+  stylix.targets.firefox = {
+    profileNames = ["default"];
+    colorTheme.enable = true;
+  };
   programs.firefox = {
     enable = true;
 

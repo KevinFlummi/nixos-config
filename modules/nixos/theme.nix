@@ -16,9 +16,16 @@
         name = "JetBrainsMono Nerd Font";
       };
     };
+    icons = {
+      enable = true;
+      package = pkgs.rose-pine-icon-theme;
+      dark = "rose-pine-moon-icons";
+      light = "rose-pine-dawn-icons";
+    };
     #cursor = {
     #  package = pkgs.rose-pine-cursor;
-    #  name = "BreezeX-RoséPine";
+    #  #name = "BreezeX-RoséPine";
+    #  name = "BreezeX-RosePine";
     #};
     opacity = {
       terminal = 0.85;
