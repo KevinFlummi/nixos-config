@@ -19,14 +19,14 @@
     icons = {
       enable = true;
       package = pkgs.rose-pine-icon-theme;
-      dark = "rose-pine-moon-icons";
-      light = "rose-pine-dawn-icons";
+      dark = "rose-pine-moon";
+      light = "rose-pine-dawn";
     };
-    #cursor = {
-    #  package = pkgs.rose-pine-cursor;
-    #  #name = "BreezeX-RoséPine";
-    #  name = "BreezeX-RosePine";
-    #};
+    cursor = {
+      package = pkgs.rose-pine-cursor;
+      name = "BreezeX-RosePine-Linux";
+      size = 24;
+    };
     opacity = {
       terminal = 0.85;
       desktop = 0.85;
