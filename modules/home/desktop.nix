@@ -36,7 +36,7 @@
       };
       bar = {
         density = "comfortable";
-        showOutline = true;
+        showOutline = false;
         widgets = {
           left = [
             {
@@ -136,6 +136,33 @@
           nightTemp = "5000";
           dayTemp = "6500";
         };
+      };
+    };
+    plugins = {
+      sources = [
+        {
+          enabled = true;
+          name = "Official Noctalia Plugins";
+          url = "https://github.com/noctalia-dev/noctalia-plugins";
+        }
+      ];
+      states = {
+        screen-recorder = {
+          enabled = true;
+          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+        };
+        translator = {
+          enabled = true;
+          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+        };
+      };
+      version = 1;
+    };
+
+    pluginSettings = {
+      screen-recorder = {
+        resolution = "1920x1080";
+        videoSource = "screen";
       };
     };
   };
