@@ -1,12 +1,10 @@
-{
-  pkgs,
-  ...
-}: {
+### Catppuccin theme
+{pkgs, ...}: {
   home.packages = with pkgs; [
     libsForQt5.qt5ct # qt thingy
-    catppuccin-gtk # theme
-    catppuccin-qt5ct # theme
-    catppuccin-kvantum # theme
+    catppuccin-gtk
+    catppuccin-qt5ct
+    catppuccin-kvantum
   ];
 
   home.sessionVariables.QT_QPA_PLATFORMTHEME = "qt5ct";
@@ -24,7 +22,7 @@
     platformTheme.name = "qtct";
     style.name = "kvantum";
   };
-  
+
   catppuccin = {
     enable = true;
     flavor = "mocha";
@@ -36,8 +34,8 @@
     thunderbird.enable = true;
     vesktop.enable = true;
     firefox = {
-        enable = true;
-        force = true;
+      enable = true;
+      force = true;
     };
     kitty.enable = true;
   };
