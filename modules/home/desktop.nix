@@ -41,7 +41,7 @@
           left = [
             {
               id = "ControlCenter";
-              useDistroLogo = false;
+              useDistroLogo = true;
             }
             {
               id = "ActiveWindow";
