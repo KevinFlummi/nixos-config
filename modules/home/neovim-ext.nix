@@ -40,14 +40,18 @@
   ];
 
   programs.neovim = {
+    extraPackages = with pkgs; [
+      nodejs_25 # needed for copilot-lua
+    ];
     plugins = with pkgs.vimPlugins; [
       # generic
       vim-be-good
-      copilot-vim
       # separate
       cellular-automaton-nvim
       blink-cmp
       conform-nvim
+      copilot-lua
+      blink-copilot
       nvim-treesitter
       nvim-treesitter-parsers.python
       nvim-treesitter-parsers.nix
