@@ -50,8 +50,8 @@
       cellular-automaton-nvim
       blink-cmp
       conform-nvim
-      copilot-lua
-      blink-copilot
+      #copilot-lua
+      #blink-copilot
       nvim-treesitter
       nvim-treesitter-parsers.python
       nvim-treesitter-parsers.nix
