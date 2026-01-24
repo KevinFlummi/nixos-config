@@ -36,6 +36,13 @@
       };
       bar = {
         density = "comfortable";
+        useSeparateOpacity = true;
+        backgroundOpacity = 0;
+        showCapsule = true;
+        capsuleOpacity = 0.85;
+        floating = true;
+        marginVertical = 4;
+        marginHorizontal = 4;
         showOutline = false;
         widgets = {
           left = [
