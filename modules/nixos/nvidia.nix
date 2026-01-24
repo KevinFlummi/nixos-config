@@ -1,8 +1,11 @@
 {
   # graphics drivers
-  hardware.graphics.enable = true;
-  services.xserver.videoDrivers = ["nvidia"];
-  hardware.nvidia.open = false;
-  hardware.nvidia.modesetting.enable = true;
+  xserver.videoDrivers = ["nvidia"];
+  hardware = {
+    graphics.enable = true;
+    graphics.enable32Bit = true;
+    nvidia.open = false;
+    nvidia.modesetting.enable = true;
+  };
   # (tbd: add cuda support)
 }
