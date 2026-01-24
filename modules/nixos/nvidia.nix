@@ -1,6 +1,6 @@
 {
   # graphics drivers
-  xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = ["nvidia"];
   hardware = {
     graphics.enable = true;
     graphics.enable32Bit = true;
