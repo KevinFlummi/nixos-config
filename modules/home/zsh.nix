@@ -28,7 +28,10 @@
       append = true;
       share = false;
     };
-    initContent = "bindkey -v";
+    initContent = ''
+      bindkey -v
+      fastfetch
+    '';
     defaultKeymap = "viins";
     setOptions = ["NO_BEEP"];
   };
