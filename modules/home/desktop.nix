@@ -31,7 +31,7 @@
         predefinedScheme = "Rose Pine";
       };
       wallpaper = {
-        enabled = false;
+        enabled = true;
         directory = "~/Pictures/Wallpapers/";
         overviewEnabled = true;
       };

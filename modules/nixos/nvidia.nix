@@ -17,7 +17,21 @@
             {
                 "pattern": {
                     "feature": "procname",
-                    "matches": "niri|quickshell|noctalia-shell"
+                    "matches": "quickshell"
+                },
+                "profile": "Limit Free Buffer Pool On Wayland Compositors"
+            },
+            {
+                "pattern": {
+                    "feature": "procname",
+                    "matches": "noctalia-shell"
+                },
+                "profile": "Limit Free Buffer Pool On Wayland Compositors"
+            },
+            {
+                "pattern": {
+                    "feature": "procname",
+                    "matches": "niri"
                 },
                 "profile": "Limit Free Buffer Pool On Wayland Compositors"
             }
