@@ -23,6 +23,10 @@
       general = {
         avatarImage = "~/Pictures/avatar.jpg";
       };
+      ui = {
+        fontDefault = "Inter";
+        fontFixed = "JetBrainsMono Nerd Font";
+      };
       location = {
         name = "Bremen";
         showWeekNumberInCalendar = true;

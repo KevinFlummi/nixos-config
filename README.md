@@ -52,5 +52,8 @@
 # Open Tasks
 
 - learn tmux
+- make modules even more modular:
+  - one file for each program in a dir called "instances"
+  - in the top-level have modules for components, like "desktop environment" etc (similar to what i have now)
+  - the configuration.nix and home.nix files can then either reference "bundles" or direct instances
 - figure out how to (partially) use it on macos
-- noctalia uses way too much vram - some error or nvidia problem or whatevver... figure something out
