@@ -205,5 +205,13 @@
     };
   };
 
+  programs.zathura = {
+    enable = true;
+    options = {
+      window-title-basename = true;
+      recolor = true;
+    };
+  };
+
   xdg.configFile."niri".source = "${dotfiles}/niri";
 }

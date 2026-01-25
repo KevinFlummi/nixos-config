@@ -33,7 +33,6 @@
     #######################################
     # Other tools
     #######################################
-    zathura # PDF viewer
     aspell # Spell checker
     aspellDicts.en # English dictionary
     aspellDicts.de # German dictionary
