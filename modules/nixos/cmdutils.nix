@@ -15,7 +15,6 @@
     unzip
     rar
     unrar
-    fastfetch
   ];
   services.openssh.enable = true;
 }
