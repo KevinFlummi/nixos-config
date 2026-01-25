@@ -31,6 +31,7 @@
         predefinedScheme = "Rose Pine";
       };
       wallpaper = {
+        enabled = false;
         directory = "~/Pictures/Wallpapers/";
         overviewEnabled = true;
       };
@@ -199,7 +200,6 @@
       };
     };
   };
-  xdg.autostart.enable = true;
 
   xdg.configFile."niri".source = "${dotfiles}/niri";
 }

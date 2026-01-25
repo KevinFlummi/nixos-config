@@ -6,7 +6,7 @@
 - Shell: Zsh
 - Editor: NVim
 - FileMan: Thunar
-- Colors: Catpucchin
+- Colors: Rose-Pine Moon
 - Fonts: Nerd-Fonts Jetbrains & Inter
 
 # Repo Organization
@@ -51,8 +51,6 @@
 
 # Open Tasks
 
-- noctalia screenrecorder plugin: add widget for the -r tag (shadowplay-esque)
-- keyboard layout mine setup (+ repair linear kbd l key) (+ print heavier case)
 - learn tmux
-- niri set up named workspaces: work, fun, aux, bg
 - figure out how to (partially) use it on macos
+- noctalia uses way too much vram - some error or nvidia problem or whatevver... figure something out
