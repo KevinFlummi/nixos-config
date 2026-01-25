@@ -1,7 +1,6 @@
 {...}: {
   imports = [
     ../modules/home/common.nix
-    ../modules/home/zsh.nix
     ../modules/home/terminal.nix
     ../modules/home/neovim.nix
     ../modules/home/neovim-ext.nix
