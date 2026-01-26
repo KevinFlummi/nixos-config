@@ -11,9 +11,15 @@
     thunar-archive-plugin # zip util
     thunar-media-tags-plugin # see media metadata
     thunar-volman # mounting
-    thunderbird # email client
     spotify # music player
   ];
+
+  programs.thunderbird = {
+    enable = true;
+    profiles."hd698uyi.default" = {
+      isDefault = true;
+    };
+  };
 
   stylix.targets.noctalia-shell.enable = false;
   programs.noctalia-shell = {
