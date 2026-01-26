@@ -3,10 +3,11 @@
     nvtopPackages.nvidia
     libva
     libva-utils
-    vdpauinfo
+    nvidia-vaapi-driver
   ];
   # graphics drivers
   services.xserver.videoDrivers = ["nvidia"];
+  environment.variables.LIBVA_DRIVER_NAME = "nvidia";
   hardware = {
     graphics.enable = true;
     graphics.enable32Bit = true;

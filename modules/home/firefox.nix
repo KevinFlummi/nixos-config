@@ -24,18 +24,11 @@
       DisableFirefoxScreenshots = true;
       DisableForgetButton = true;
       DisableMasterPasswordCreation = true;
-      DisableProfileImport = true;
-      DisableProfileRefresh = true;
       DisableSetDesktopBackground = true;
       DisablePocket = true;
       DisableTelemetry = true;
       DisableFormHistory = true;
       DisablePasswordReveal = true;
-
-      # Access Restrictions
-      BlockAboutConfig = false;
-      BlockAboutProfiles = false;
-      BlockAboutSupport = false;
 
       # UI and Behavior
       DisplayMenuBar = "never";
@@ -147,35 +140,27 @@
           };
         };
       };
-
       settings = {
         # Startup
         "browser.startup.page" = 3;
         # Fingerprinting
-        "privacy.partition.network_state" = true;
-        "privacy.partition.serviceWorkers" = true;
-        "privacy.partition.always_partition_third_party_non_cookie_storage" = true;
         "privacy.trackingprotection.enabled" = true;
-        "privacy.trackingprotection.pbmode.enabled" = true;
-        "privacy.trackingprotection.fingerprinting.enabled" = true;
-        "privacy.trackingprotection.cryptomining.enabled" = true;
-        "privacy.trackingprotection.emailtracking.enabled" = true;
-        # Cookies & Cache
+        ## Cookies & Cache
         "network.cookie.cookieBehavior" = 4;
-        "browser.cache.cache_isolation" = true;
-        # Networking
+        ## Networking
         "dom.security.https_only_mode" = true;
-        "network.trr.mode" = 2;
-        "network.trr.strict_native_fallback" = false;
-        "network.http.referer.XOriginPolicy" = 1;
-        "network.http.referer.XOriginTrimmingPolicy" = 2;
-        # Telemetry
+        ## Telemetry
         "toolkit.telemetry.enabled" = false;
         "toolkit.telemetry.unified" = false;
         "datareporting.healthreport.uploadEnabled" = false;
         "browser.ping-centre.telemetry" = false;
         "extensions.pocket.enabled" = false;
         "extensions.formautofill.creditCards.enabled" = false;
+        # Hardware Acceleration (doesnt work yet...)
+        "media.hardware-video-decoding.force-enabled" = true;
+        "gfx.x11-egl.force-enabled" = true;
+        "widget.dmabuf.force-enabled" = true;
+        "media.av1.enabled" = false;
       };
     };
   };
