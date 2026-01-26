@@ -6,9 +6,9 @@
 }: {
   home.packages = with pkgs; [
     gimp
-    yt-dlp
-    kdePackages.kdenlive
+    #kdePackages.kdenlive
     audacity
-    obs-studio
   ];
+  programs.yt-dlp.enable = true;
+  programs.obs-studio.enable = true;
 }
