@@ -7,13 +7,16 @@
     ffmpeg-full # codecs
   ];
 
+  programs.gpg.enable = true;
   programs.git = {
     enable = true;
+    package = pkgs.git.override {withLibsecret = true;};
     settings = {
       user.name = "Kevin Ferneding";
       user.email = "email@kevinferneding.xyz";
       init.defaultBranch = "main";
       pull.rebase = true;
+      credential.helper = "libsecret";
     };
   };
   programs.fastfetch = {
