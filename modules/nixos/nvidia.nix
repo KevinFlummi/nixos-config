@@ -1,6 +1,9 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     nvtopPackages.nvidia
+    libva
+    libva-utils
+    vdpauinfo
   ];
   # graphics drivers
   services.xserver.videoDrivers = ["nvidia"];

@@ -34,8 +34,8 @@
 
       # Access Restrictions
       BlockAboutConfig = false;
-      BlockAboutProfiles = true;
-      BlockAboutSupport = true;
+      BlockAboutProfiles = false;
+      BlockAboutSupport = false;
 
       # UI and Behavior
       DisplayMenuBar = "never";
