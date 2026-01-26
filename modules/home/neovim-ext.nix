@@ -51,6 +51,7 @@
       conform-nvim
       #copilot-lua
       #blink-copilot
+      harpoon2
       nvim-treesitter
       nvim-treesitter-parsers.python
       nvim-treesitter-parsers.nix
