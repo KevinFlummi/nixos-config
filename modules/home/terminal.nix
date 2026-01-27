@@ -1,15 +1,33 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   programs.zsh = {
     enable = true;
     shellAliases = {
-      btw = "echo i use NixOS with zsh btw";
+      btw = "echo ${config.home.homeDirectory}";
       cl = "clear";
+      hist = "history";
+      ls = "ls -l";
       nrb = "sudo nixos-rebuild switch --flake";
       nup = "nix flake update";
       gits = "git status";
       gitc = "git commit";
       gitps = "git push";
       gitpl = "git pull";
+    };
+    sessionVariables = {
+      # the classics
+      EDITOR = "nvim";
+      BROWSER = "firefox";
+      MAILER = "thunderbird";
+      TERMINAL = "kitty";
+      # bookmarks
+      conf = "${config.home.homeDirectory}/nixos-config";
+      dots = "${config.home.homeDirectory}/nixos-config/modules/config";
+      hs = "${config.home.homeDirectory}/Nextcloud/Programmierzeug/haskell";
+      thesis = "${config.home.homeDirectory}/Nextcloud/Uni/DTU/Thesis";
     };
     autosuggestion.enable = true;
     syntaxHighlighting = {
@@ -22,11 +40,11 @@
       ];
     };
     history = {
-      path = "$HOME/.zsh_history";
+      path = "${config.home.homeDirectory}/.zsh_history";
       size = 10000;
       save = 10000;
       append = true;
-      share = true;
+      share = false;
     };
     initContent = ''
       bindkey -v
