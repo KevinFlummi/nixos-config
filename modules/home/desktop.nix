@@ -45,6 +45,57 @@
         directory = "~/Pictures/Wallpapers/";
         overviewEnabled = true;
       };
+      dock = {
+        size = 1.5;
+        floatingRatio = 1.5;
+        onlySameOutput = false;
+      };
+      appLauncher = {
+        enableClipboardHistory = true;
+        iconMode = "native";
+        terminalCommand = "kitty -e";
+      };
+      audio = {
+        preferredPlayer = "spotify";
+      };
+      nightLight = {
+        enabled = true;
+        autoSchedule = true;
+        nightTemp = "5000";
+        dayTemp = "6500";
+      };
+      controlCenter = {
+        shortcuts = {
+          left = [
+            {
+              id = "Network";
+            }
+            {
+              id = "Bluetooth";
+            }
+            {
+              id = "WallpaperSelector";
+            }
+            {
+              id = "DarkMode";
+            }
+          ];
+          right = [
+            {
+              id = "Notifications";
+            }
+            {
+              id = "PowerProfile";
+            }
+            {
+              id = "KeepAwake";
+            }
+            {
+              id = "NightLight";
+            }
+          ];
+        };
+      };
       bar = {
         density = "comfortable";
         useSeparateOpacity = true;
@@ -103,57 +154,6 @@
             }
           ];
         };
-        dock = {
-          size = 1.5;
-          floatingRatio = 1.5;
-          onlySameOutput = false;
-        };
-        controlCenter = {
-          shortcuts = {
-            left = [
-              {
-                id = "Network";
-              }
-              {
-                id = "Bluetooth";
-              }
-              {
-                id = "WallpaperSelector";
-              }
-              {
-                id = "DarkMode";
-              }
-            ];
-            right = [
-              {
-                id = "Notifications";
-              }
-              {
-                id = "PowerProfile";
-              }
-              {
-                id = "KeepAwake";
-              }
-              {
-                id = "NightLight";
-              }
-            ];
-          };
-        };
-        appLauncher = {
-          enableClipboardHistory = true;
-          iconMode = "native";
-          terminalCommand = "kitty -e";
-        };
-        audio = {
-          preferredPlayer = "spotify";
-        };
-        nightLight = {
-          enabled = true;
-          autoSchedule = true;
-          nightTemp = "5000";
-          dayTemp = "6500";
-        };
       };
     };
     plugins = {
@@ -180,7 +180,7 @@
     pluginSettings = {
       screen-recorder = {
         resolution = "1920x1080";
-        videoSource = "screen";
+        quality = "high";
       };
     };
   };
