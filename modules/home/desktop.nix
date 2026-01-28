@@ -132,6 +132,7 @@
               showArtistFirst = false;
               showVisualizer = true;
               visualizerType = "linear";
+              maxWidth = 200;
             }
             {
               id = "Tray";
