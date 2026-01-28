@@ -138,9 +138,13 @@
               id = "Tray";
               enableDrawer = true;
             }
+            # use my own better recorder (still some errors because nixos)
             {
-              id = "plugin:screen-recorder";
+              id = "plugin:screen-recorder-replay";
             }
+            #{
+            #  id = "plugin:screen-recorder";
+            #}
             {
               id = "Volume";
             }
@@ -166,8 +170,12 @@
         }
       ];
       states = {
-        screen-recorder = {
+        screen-recorder-replay = {
           enabled = true;
+          #sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+        };
+        screen-recorder = {
+          enabled = false;
           sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
         };
         translator = {
@@ -179,9 +187,11 @@
     };
 
     pluginSettings = {
-      screen-recorder = {
+      screen-recorder-replay = {
         resolution = "1920x1080";
+        replayLength = "60";
         quality = "high";
+        copyToClipboard = true;
       };
     };
   };
