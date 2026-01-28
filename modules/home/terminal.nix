@@ -16,6 +16,7 @@
       gitc = "git commit";
       gitps = "git push";
       gitpl = "git pull";
+      zt = "zathura";
     };
     sessionVariables = {
       # the classics
