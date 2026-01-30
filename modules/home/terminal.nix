@@ -9,7 +9,7 @@
       btw = "echo ${config.home.homeDirectory}";
       cl = "clear";
       hist = "history";
-      ls = "ls -l";
+      ls = "ls -l --color=auto";
       nrb = "sudo nixos-rebuild switch --flake";
       nup = "nix flake update";
       gits = "git status";
