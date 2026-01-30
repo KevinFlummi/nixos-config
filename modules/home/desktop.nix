@@ -27,7 +27,7 @@
     settings = {
       settingsVersion = 0;
       general = {
-        avatarImage = "~/Pictures/avatar.jpg";
+        avatarImage = "${dotfiles}/avatar.jpg";
       };
       ui = {
         fontDefault = "Inter";
@@ -42,7 +42,7 @@
       };
       wallpaper = {
         enabled = true;
-        directory = "~/Pictures/Wallpapers/";
+        directory = "${dotfiles}/wallpapers/";
         overviewEnabled = true;
       };
       dock = {

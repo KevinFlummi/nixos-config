@@ -17,5 +17,5 @@
     rar
     unrar
   ];
-  services.openssh.enable = true;
+  programs.ssh.enable = true;
 }
