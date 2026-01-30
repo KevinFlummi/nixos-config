@@ -155,6 +155,10 @@
               id = "KeyboardLayout";
             }
             {
+              id = "Battery";
+              displayMode = "alwaysShow";
+            }
+            {
               id = "Clock";
             }
           ];
