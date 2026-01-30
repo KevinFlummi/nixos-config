@@ -2,7 +2,6 @@
   environment.systemPackages = with pkgs; [
     jq
     fd
-    ssh
     vim
     git
     curl
