@@ -28,7 +28,7 @@
     noctalia,
     ...
   }: {
-    nixosConfigurations.pc = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.tofu = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = {
         inherit dotfiles;

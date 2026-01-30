@@ -22,7 +22,7 @@
     ../../modules/nixos/gaming.nix
   ];
 
-  networking.hostName = "pc";
+  networking.hostName = "tofu";
 
   # allow proprietary garbage
   nixpkgs.config.allowUnfree = true;
