@@ -53,5 +53,30 @@
         }
       ];
     };
+    nixosConfigurations.lentil = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = {
+        inherit dotfiles;
+      };
+      modules = [
+        stylix.nixosModules.stylix
+        ./hosts/lentil/configuration.nix
+        home-manager.nixosModules.home-manager
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = {
+              inherit dotfiles;
+            };
+            users.kevin.imports = [
+              ./home/kevin.nix
+              noctalia.homeModules.default
+            ];
+            backupFileExtension = "backup";
+          };
+        }
+      ];
+    };
   };
 }

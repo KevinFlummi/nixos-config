@@ -9,8 +9,6 @@
   services.xserver.videoDrivers = ["nvidia"];
   environment.variables.LIBVA_DRIVER_NAME = "nvidia";
   hardware = {
-    graphics.enable = true;
-    graphics.enable32Bit = true;
     nvidia.open = false;
     nvidia.modesetting.enable = true;
   };

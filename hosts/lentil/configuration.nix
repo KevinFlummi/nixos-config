@@ -15,14 +15,13 @@
     ../../modules/nixos/audio.nix
     ../../modules/nixos/users.nix
     ../../modules/nixos/graphics.nix
-    ../../modules/nixos/nvidia.nix
     ../../modules/nixos/login.nix
     ../../modules/nixos/wayland.nix
     ../../modules/nixos/theme.nix
     ../../modules/nixos/gaming.nix
   ];
 
-  networking.hostName = "pc";
+  networking.hostName = "lentil";
 
   # allow proprietary garbage
   nixpkgs.config.allowUnfree = true;
