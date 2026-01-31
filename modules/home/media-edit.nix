@@ -6,7 +6,7 @@
 }: {
   home.packages = with pkgs; [
     gimp
-    kdePackages.kdenlive
+    shotcut
     audacity
   ];
   programs.yt-dlp.enable = true;
