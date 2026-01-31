@@ -11,6 +11,7 @@
     ../modules/home/gaming.nix
     ../modules/home/discord.nix
     ../modules/home/research.nix
+    ../modules/home/mime_defaults.nix
   ];
 
   home.username = "kevin";
