@@ -39,9 +39,9 @@
   ];
 
   programs.neovim = {
-    extraPackages = with pkgs; [
-      nodejs_25 # needed for copilot-lua
-    ];
+    #extraPackages = with pkgs; [
+    #  nodejs_25 # needed for copilot-lua
+    #];
     plugins = with pkgs.vimPlugins; [
       # generic
       vim-be-good
