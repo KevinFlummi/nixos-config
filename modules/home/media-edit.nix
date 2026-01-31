@@ -6,7 +6,7 @@
 }: {
   home.packages = with pkgs; [
     gimp
-    #kdePackages.kdenlive
+    kdePackages.kdenlive
     audacity
   ];
   programs.yt-dlp.enable = true;
