@@ -192,9 +192,9 @@
 
     pluginSettings = {
       screen-recorder-replay = {
-        resolution = "1920x1080";
+        resolution = "3840x2160";
         replayLength = "60";
-        quality = "high";
+        quality = "ultra";
         copyToClipboard = true;
       };
     };
