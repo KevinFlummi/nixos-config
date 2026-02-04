@@ -35,7 +35,7 @@
       };
       modules = [
         stylix.nixosModules.stylix
-        ./hosts/pc/configuration.nix
+        ./hosts/tofu/configuration.nix
         home-manager.nixosModules.home-manager
         {
           home-manager = {
