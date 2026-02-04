@@ -48,7 +48,7 @@
           type = "gpu";
           key = "  ├󰍛";
           keyColor = "cyan";
-          format = "{vendor} {name}";
+          format = "{name}";
         }
         {
           type = "memory";
