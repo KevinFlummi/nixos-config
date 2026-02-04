@@ -19,6 +19,9 @@
       credential.helper = "libsecret";
     };
   };
+
+  programs.btop.enable = true;
+
   programs.fastfetch = {
     enable = true;
     settings = {

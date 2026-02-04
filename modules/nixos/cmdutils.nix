@@ -9,7 +9,6 @@
     tree
     nmap
     ripgrep
-    btop
     gnupg
     gnumake
     zip
