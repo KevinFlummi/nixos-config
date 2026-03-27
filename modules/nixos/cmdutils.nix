@@ -15,5 +15,6 @@
     unzip
     rar
     unrar
+    ausweisapp
   ];
 }
