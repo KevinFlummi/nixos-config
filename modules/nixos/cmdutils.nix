@@ -8,6 +8,7 @@
     wget
     tree
     nmap
+    wev
     ripgrep
     gnupg
     gnumake
