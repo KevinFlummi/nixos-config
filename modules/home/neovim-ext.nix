@@ -1,8 +1,4 @@
-{
-  pkgs,
-  dotfiles,
-  ...
-}: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     #######################################
     # Language servers
@@ -23,7 +19,7 @@
     alejandra # Nix
     shfmt # Shell
     stylua # Lua
-    nodePackages.prettier # JSON / YAML / Markdown / HTML / JS / TS
+    prettier # JSON / YAML / Markdown / HTML / JS / TS
     taplo # TOML
     rustfmt # Rust
     clang-tools # C / C++ / ObjC
