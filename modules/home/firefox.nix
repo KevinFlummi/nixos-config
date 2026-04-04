@@ -157,9 +157,13 @@
         "extensions.pocket.enabled" = false;
         "extensions.formautofill.creditCards.enabled" = false;
         # Hardware Acceleration (doesnt work yet...)
-        "media.hardware-video-decoding.force-enabled" = true;
-        "gfx.x11-egl.force-enabled" = true;
-        "widget.dmabuf.force-enabled" = true;
+        #"media.hardware-video-decoding.force-enabled" = true;
+        "media.hardware-video-decoding.enabled" = true;
+        "media.hardware-video-decoding.force-enabled" = false;
+        #"gfx.x11-egl.force-enabled" = true;
+        #"widget.dmabuf.force-enabled" = true;
+        "widget.dmabuf.enabled" = true;
+        "widget.dmabuf.force_enabled" = false;
         "media.av1.enabled" = false;
       };
     };
