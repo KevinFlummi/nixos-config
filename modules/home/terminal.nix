@@ -5,6 +5,7 @@
 }: {
   programs.zsh = {
     enable = true;
+    dotDir = "${config.xdg.configHome}/zsh";
     shellAliases = {
       btw = "echo ${config.home.homeDirectory}";
       cl = "clear";
