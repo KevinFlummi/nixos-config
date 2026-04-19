@@ -19,6 +19,7 @@
     ../../modules/nixos/wayland.nix
     ../../modules/nixos/theme.nix
     ../../modules/nixos/gaming.nix
+    ../../modules/nixos/vfx.nix
   ];
 
   networking.hostName = "tofu";
