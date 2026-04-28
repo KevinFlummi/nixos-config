@@ -6,5 +6,6 @@
     texliveFull
     bibtex2html
     ghostscript
+    teams-for-linux
   ];
 }
